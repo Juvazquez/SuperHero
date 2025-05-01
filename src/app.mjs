@@ -38,9 +38,12 @@ app.use(methodOverride('_method')); // para que pueda leer el override en POST
 app.use('/api', superHeroRoutes); // API en /api/heroes
 
 
-// Ruta principal
-app.get('/heroes', obtenerDashboardSuperheroes);
-
+// Ruta principal 
+app.get('/', (req, res) => {
+    res.render('index', {
+        title: 'Pagina principal'
+    });
+});
 // Ruta para la pagina Acerca de 
 app.get('/about', (req, res) => {
     res.render('about', {
