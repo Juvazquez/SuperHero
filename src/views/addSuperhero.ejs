@@ -1,0 +1,57 @@
+
+
+<div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md mx-auto mt-10">
+  <h2 class="text-2xl font-bold text-center mb-4">Agregar Superhéroe</h2>
+
+  <form action="/api/heroes/agregar" method="POST" class="space-y-4">
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Nombre del Superhéroe</label>
+      <input type="text" name="nombreSuperHeroe" required class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Nombre Real</label>
+      <input type="text" name="nombreReal" required class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Edad</label>
+      <input type="number" name="edad" min="1" required class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Planeta de Origen</label>
+      <input type="text" name="planetaOrigen" required class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Debilidad</label>
+      <input type="text" name="debilidad" required class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <div id="poderes-container">
+      <label class="block text-sm font-medium text-gray-700">Poderes</label>
+      <input type="text" name="poderes[]" required placeholder="Ej: Volar" class="w-full p-2 mb-2 border border-gray-300 rounded-lg">
+    </div>
+
+    <button type="button" onclick="agregarPoder()" class="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition">
+      + Agregar otro poder
+    </button>
+
+    <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition">
+      Agregar Superhéroe
+    </button>
+  </form>
+</div>
+
+<script>
+  function agregarPoder() {
+    const contenedor = document.getElementById('poderes-container');
+    const nuevoInput = document.createElement('input');
+    nuevoInput.type = 'text';
+    nuevoInput.name = 'poderes[]';
+    nuevoInput.placeholder = 'Ej: Invisibilidad';
+    nuevoInput.className = 'w-full p-2 mb-2 border border-gray-300 rounded-lg';
+    contenedor.appendChild(nuevoInput);
+  }
+</script>

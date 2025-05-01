@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-validator": "^7.2.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.12.0"
+  },
+  "name": "superhero",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juvazquez/SuperHero.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juvazquez/SuperHero/issues"
+  },
+  "homepage": "https://github.com/Juvazquez/SuperHero#readme",
+  "description": ""
+}
